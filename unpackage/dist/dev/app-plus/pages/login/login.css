@@ -1,0 +1,233 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.uni-popup-message[data-v-a4566996] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.uni-popup-message__box[data-v-a4566996] {
+  background-color: #e1f3d8;
+  padding: 10px 15px;
+  border-color: #eee;
+  border-style: solid;
+  border-width: 1px;
+  flex: 1;
+}
+@media screen and (min-width: 500px) {
+.fixforpc-width[data-v-a4566996] {
+    margin-top: 20px;
+    border-radius: 4px;
+    flex: none;
+    min-width: 380px;
+    max-width: 50%;
+}
+}
+.uni-popup-message-text[data-v-a4566996] {
+  font-size: 14px;
+  padding: 0;
+}
+.uni-popup__success[data-v-a4566996] {
+  background-color: #e1f3d8;
+}
+.uni-popup__success-text[data-v-a4566996] {
+  color: #67C23A;
+}
+.uni-popup__warn[data-v-a4566996] {
+  background-color: #faecd8;
+}
+.uni-popup__warn-text[data-v-a4566996] {
+  color: #E6A23C;
+}
+.uni-popup__error[data-v-a4566996] {
+  background-color: #fde2e2;
+}
+.uni-popup__error-text[data-v-a4566996] {
+  color: #F56C6C;
+}
+.uni-popup__info[data-v-a4566996] {
+  background-color: #F2F6FC;
+}
+.uni-popup__info-text[data-v-a4566996] {
+  color: #909399;
+}
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.uni-popup[data-v-4dd3c44b] {
+  position: fixed;
+  z-index: 99;
+}
+.uni-popup.top[data-v-4dd3c44b], .uni-popup.left[data-v-4dd3c44b], .uni-popup.right[data-v-4dd3c44b] {
+  top: 0;
+}
+.uni-popup .uni-popup__wrapper[data-v-4dd3c44b] {
+  display: block;
+  position: relative;
+  /* iphonex 等安全区设置，底部安全区适配 */
+}
+.uni-popup .uni-popup__wrapper.left[data-v-4dd3c44b], .uni-popup .uni-popup__wrapper.right[data-v-4dd3c44b] {
+  padding-top: 0;
+  flex: 1;
+}
+.fixforpc-z-index[data-v-4dd3c44b] {
+  z-index: 999;
+}
+.fixforpc-top[data-v-4dd3c44b] {
+  top: 0;
+}
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4080FF, #4080FF);
+  background-image: url(../../static/background.png);
+  position: relative;
+  overflow: hidden;
+}
+.welcome-section {
+  padding: 4.5rem 0.9375rem 2.8125rem;
+  z-index: 1;
+}
+.welcome-section .greeting {
+  font-size: 1.375rem;
+  color: #ffffff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.625rem;
+}
+.welcome-section .welcome-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.login-form {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  z-index: 1;
+  height: 18rem;
+  width: calc(100% - 1.875rem);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.login-form .input-group {
+  margin-bottom: 1.5625rem;
+}
+.login-form .phone-input,
+.login-form .verification-input {
+  background-color: #f5f7fb;
+  display: block;
+  height: 2.75rem;
+  border-radius: 1.375rem;
+  padding-bottom: 0.3125rem;
+  box-sizing: border-box;
+  padding: 0.625rem 1.25rem;
+}
+.login-form .verification-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-form .verification-group .verification-input {
+  flex: 1;
+  border-radius: 1.375rem 0 0 1.375rem;
+}
+.login-form .verification-group .verification-button {
+  border-radius: 0 1.375rem 1.375rem 0;
+  width: 6.25rem;
+  height: 2.75rem;
+  background-color: #4080FF;
+  border: none;
+  font-size: 0.875rem;
+  line-height: 2.75rem;
+}
+.login-form .verification-group .verification-button[disabled] {
+  background-color: #c2d3ff;
+}
+.login-form .login-button {
+  margin-top: 2.5rem;
+  width: 100%;
+  height: 2.8125rem;
+  border-radius: 1.40625rem;
+  background-color: #4080FF;
+  line-height: 2.8125rem;
+  border: none;
+  font-size: 1rem;
+}
+.login-form .alternative-login {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+.login-form .alternative-login uni-text {
+  color: #4080FF;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,374 @@
+/* 颜色变量 */
+$primary-color: #0086F6; // 主色调：按钮、重要元素、强调色
+$primary-light: rgba(0, 134, 246, 0.1); // 主色调轻量版：背景、标签等
+$secondary-color: #ff9100; // 次要色调：警告、提醒
+$success-color: #4cd964; // 成功状态颜色
+$warning-color: #ff9500; // 警告状态颜色
+$error-color: #ff453a; // 错误状态颜色
+$info-color: #2979ff; // 信息状态颜色
+
+$text-primary: #2c3e50; // 主要文本颜色
+$text-regular: #333333; // 常规文本颜色
+$text-secondary: #666666; // 次要文本颜色
+$text-placeholder: #999999; // 占位符文本颜色
+$border-color: #eaeaea; // 边框颜色
+$background-color: #f7f8fa; // 背景色
+$card-background: #ffffff; // 卡片背景色
+
+/* 字体设置 */
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-size-large: 34rpx; // 大字体：标题
+$font-size-medium: 28rpx; // 中等字体：内容
+$font-size-small: 24rpx; // 小字体：辅助信息
+$font-size-mini: 22rpx; // 最小字体：标签、角标
+
+/* 间距设置 */
+$spacing-mini: 4rpx;
+$spacing-small: 8rpx;
+$spacing-base: 16rpx;
+$spacing-medium: 24rpx;
+$spacing-large: 30rpx;
+$spacing-xl: 40rpx;
+
+/* 圆角设置 */
+$radius-small: 6rpx;
+$radius-base: 16rpx;
+$radius-large: 36rpx;
+$radius-circle: 50%;
+
+/* 阴影设置 */
+$shadow-light: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+$shadow-medium: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+$shadow-dark: 0 6rpx 20rpx rgba(0, 0, 0, 0.12);
+
+/* 过渡效果 */
+$transition-base: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20rpx); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* 页面基础样式 */
+.page-container {
+  min-height: 100vh;
+  background-color: $background-color;
+  position: relative;
+}
+
+/* 导航栏样式 */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  padding: 0 $spacing-large;
+  background-color: $card-background;
+  border-bottom: 1rpx solid $border-color;
+  position: relative;
+  z-index: 100;
+  
+  .back-btn {
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius-circle;
+    transition: $transition-fast;
+    
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+  
+  .page-title {
+    font-size: $font-size-large;
+    font-weight: 600;
+    color: $text-primary;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .right-action {
+    display: flex;
+    align-items: center;
+    
+    .action-item {
+      padding: 0 $spacing-small;
+      color: $primary-color;
+      
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+/* 搜索框样式 */
+.search-box {
+  display: flex;
+  align-items: center;
+  margin: $spacing-medium $spacing-large;
+  height: 72rpx;
+  background-color: $card-background;
+  border-radius: $radius-large;
+  padding: 0 $spacing-medium;
+  box-shadow: $shadow-light;
+  
+  .search-input {
+    flex: 1;
+    height: 72rpx;
+    font-size: $font-size-medium;
+    margin: 0 $spacing-base;
+    color: $text-regular;
+  }
+}
+
+/* 列表容器样式 */
+.list-container {
+  height: calc(100vh - 180rpx);
+  padding: 0;
+}
+
+/* 卡片样式 */
+.card {
+  width: calc(100% - 60rpx);
+  background-color: $card-background;
+  border-radius: $radius-base;
+  margin-bottom: $spacing-large;
+  box-shadow: $shadow-light;
+  overflow: hidden;
+  transition: $transition-fast;
+  animation: slideIn 0.3s ease;
+	margin: $spacing-xl auto;
+  &:active {
+    transform: scale(0.98);
+    box-shadow: $shadow-light;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-medium;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-content {
+    padding: $spacing-base $spacing-medium $spacing-medium;
+  }
+  
+  .info-item {
+    display: flex;
+    margin-bottom: $spacing-small;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    .info-label {
+      width: 160rpx;
+      font-size: $font-size-small;
+      color: $text-placeholder;
+    }
+    
+    .info-value {
+      flex: 1;
+      font-size: $font-size-small;
+      color: $text-regular;
+    }
+  }
+}
+
+/* 状态标签样式 */
+.status-tag {
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: $font-size-mini;
+  
+  &.status-pending {
+    background-color: rgba($secondary-color, 0.1);
+    color: $secondary-color;
+  }
+  
+  &.status-inprogress {
+    background-color: rgba($info-color, 0.1);
+    color: $info-color;
+  }
+  
+  &.status-completed {
+    background-color: rgba($success-color, 0.1);
+    color: $success-color;
+  }
+  
+  &.status-cancelled {
+    background-color: rgba($text-placeholder, 0.1);
+    color: $text-placeholder;
+  }
+}
+
+/* 空状态样式 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 0;
+  
+  .empty-image {
+    width: 240rpx;
+    height: 240rpx;
+    margin-bottom: $spacing-large;
+    opacity: 0.8;
+  }
+  
+  .empty-text {
+    font-size: $font-size-medium;
+    color: $text-placeholder;
+    margin-bottom: $spacing-large;
+  }
+  
+  .refresh-btn {
+    width: 200rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: $font-size-medium;
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.1);
+    border: none;
+    border-radius: 35rpx;
+    transition: $transition-fast;
+    
+    &:active {
+      opacity: 0.8;
+    }
+    
+    &::after {
+      border: none;
+    }
+  }
+}
+
+/* 加载中状态样式 */
+.loading-state {
+  padding: 60rpx 0;
+  text-align: center;
+}
+
+/* 加载更多区域样式 */
+.load-more-area {
+  width: 100%;
+  padding: $spacing-medium 0 $spacing-xl;
+  text-align: center;
+}
+
+/* 按钮基础样式 */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $spacing-large;
+  height: 80rpx;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  border-radius: $radius-large;
+  transition: $transition-fast;
+  
+  &.btn-primary {
+    background: linear-gradient(135deg, lighten($primary-color, 5%), darken($primary-color, 5%));
+    color: white;
+    box-shadow: 0 4rpx 12rpx rgba($primary-color, 0.3);
+    
+    &:active {
+      transform: translateY(2rpx);
+      box-shadow: 0 2rpx 6rpx rgba($primary-color, 0.2);
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: white;
+    color: $primary-color;
+    border: 1rpx solid $primary-color;
+    
+    &:active {
+      background-color: rgba($primary-color, 0.05);
+    }
+  }
+}
+
+/* 浮动按钮样式 */
+.floating-btn {
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: $radius-circle;
+  background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+  box-shadow: $shadow-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transition: $transition-base;
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* 分割线样式 */
+.divider {
+  height: 1rpx;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: $spacing-base 0;
+}
+
+/* 标签页样式 */
+.tabs-header {
+  display: flex;
+  background-color: white;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+  
+  .tab-item {
+    flex: 1;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-medium;
+    color: $text-secondary;
+    position: relative;
+    transition: $transition-fast;
+    
+    &.active {
+      color: $primary-color;
+      font-weight: 500;
+    }
+    
+    .tab-indicator {
+      position: absolute;
+      bottom: 0;
+      width: 60rpx;
+      height: 4rpx;
+      border-radius: 2rpx;
+      background-color: $primary-color;
+      transition: $transition-base;
+    }
+  }
+}
